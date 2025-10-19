@@ -1,0 +1,67 @@
+import random
+numb = []
+for n in range(101):
+    numb.append(n)
+
+nam = random.choice(numb)
+# print(nam)
+
+def hard ():
+    game1 = True
+    game = 5
+
+    def ask ():
+        print(f"you have {game} attempt")
+        num = int(input("choose number "))
+        return num
+
+    while game1:
+        dad =  ask()
+        if dad < nam:
+            print("its low")
+            game -= 1
+        if dad > nam:
+            print("its high")
+            game -= 1
+        if dad == nam  :
+            print("you winn")
+            game1= 1
+        if  game == 0:
+            game1 = False
+            print("no more left")
+
+
+
+
+def easy ():
+    game1 = 0
+    game = 10
+    while game1 == 0 :
+        print(f"you have {game} attempt")
+        num = int(input("choose number "))
+        if num < nam:
+            print("its low")
+            game -= 1
+
+        if num > nam:
+            print("its high")
+            game -= 1
+        if num == nam  :
+            print("you winn")
+            game1= 1
+        if game == 0:
+            game1 =1
+            print("all chane done ")
+
+
+
+print("guess the number 1 -100")
+eh =input("easy or hard e and h")
+if eh == "e":
+    easy()
+if eh == "h":
+    hard()
+
+
+
+
