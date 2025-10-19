@@ -41,8 +41,10 @@ def is_prime (num):
         print("prime number")
     else:
         print("not")
+    
 
 
 
+is_prime(100)
 
 is_prime(100)
